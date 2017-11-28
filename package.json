@@ -4,8 +4,12 @@
   "description": "simple bot to send gifs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "ServelessP",
+  "license": "ISC",
+  "dependencies": {
+    "giphy-api": "^1.2.7",
+    "node-telegram-bot-api": "^0.29.0"
+  }
 }

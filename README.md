@@ -5,6 +5,6 @@
 - npm install
 - use the @BotFather on telegram to get your api key and add it on the index.js on the token variable.
 
-## start the boot
+## start the bot
 
 - npm start

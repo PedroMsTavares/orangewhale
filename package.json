@@ -1,0 +1,11 @@
+{
+  "name": "orangewhale",
+  "version": "1.0.0",
+  "description": "simple bot to send gifs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -5,8 +5,8 @@ jobs:
    steps:
      - checkout
      - run: docker build -t orangewhale .
-  deploy:
-    production:
-      branch: "master"
-      commands:
-        - sh ./deploy.sh
+     - deploy:
+        production:
+          branch: "master"
+          commands:
+            - sh ./deploy.sh

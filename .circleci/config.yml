@@ -19,7 +19,6 @@ jobs:
     steps:
       - checkout
       - run: docker build -t orangewhale .
-      - run: docker run -d orangewhale:latest
         command: |
           sh ./deploy.sh
 workflows:

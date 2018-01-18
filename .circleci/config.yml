@@ -9,7 +9,6 @@ jobs:
    machine: true
    steps:
      - checkout
-    
  deploy:
    machine: true
    steps:

@@ -6,4 +6,6 @@ jobs:
      - checkout
      - run: docker build -t orangewhale .
      - deploy:
-       run: sh ./deploy.sh
+         name: Push application Docker image
+         command: |
+         sh ./deploy.sh

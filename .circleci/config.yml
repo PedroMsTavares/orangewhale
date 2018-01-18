@@ -5,7 +5,17 @@ jobs:
    steps:
      - checkout
      - run: docker build -t orangewhale .
+ deploy:
+   machine: true
+   steps:
+     - checkout
      - deploy:
-         name: Push application Docker image
-         command: |
+        name: Push application Docker image to ecs
+        command: |
           sh ./deploy.sh
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - deploy

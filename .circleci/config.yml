@@ -1,8 +1,11 @@
-machine:
-  services:
-    - docker
+version: 2
+jobs:
+   build:
+    machine:
+      services:
+        - docker
 
-dependencies:
-  override:
-    - docker info
-    - docker build --rm=false -t circleci/elasticsearch .
+    dependencies:
+      override:
+        - docker info
+        - docker build --rm=false -t circleci/elasticsearch .

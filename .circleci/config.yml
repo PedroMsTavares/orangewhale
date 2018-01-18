@@ -5,4 +5,9 @@ jobs:
     steps:
      - checkout
      - run: docker build -t orangewhale .
-  
+  test1:
+    machine: true
+    steps:
+      - checkout
+      - run: docker build -t orangewhale .
+      - run: docker run orangewhale:latest

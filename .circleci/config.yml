@@ -5,12 +5,23 @@ jobs:
    steps:
      - checkout
      - run: docker build -t orangewhale .
+ test:
+   machine: true
+   steps:
+     - checkout
+     - test:
+        name: test application
+        - checkout
+        - run: docker build -t orangewhale .
+        - run: docker run orangewhale:latest
  deploy:
    machine: true
    steps:
      - checkout
      - deploy:
         name: Push application Docker image to ecs
+        - checkout
+        - run: docker build -t orangewhale .
         command: |
           sh ./deploy.sh
 workflows:
@@ -18,6 +29,9 @@ workflows:
   build-test-and-deploy:
     jobs:
       - build
-      - deploy:
+      - test:
           requires:
             - build
+      - deploy:
+          requires:
+            - test

@@ -1,11 +1,11 @@
-version: 2
+version: 2 
 jobs:
- build:
-   machine: true
-   steps:
+  build:
+    machine: true
+    steps:
      - checkout
      - run: docker build -t orangewhale .
- test1:
+  test1:
    machine: true
    steps:
      - checkout

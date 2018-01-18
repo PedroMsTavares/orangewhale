@@ -12,14 +12,14 @@ jobs:
     steps:
       - checkout
       - run: docker build -t orangewhale .
-      - run: docker run orangewhale:latest
+      - run: docker run -d orangewhale:latest
   deploy:
     name: Deploy
     machine: true
     steps:
       - checkout
       - run: docker build -t orangewhale .
-      - run: docker run orangewhale:latest
+      - run: docker run -d orangewhale:latest
         command: |
           sh ./deploy.sh
 workflows:

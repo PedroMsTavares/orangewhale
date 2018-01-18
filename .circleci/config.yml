@@ -1,17 +1,20 @@
 version: 2
 jobs:
   build:
+    name: Build
     machine: true
     steps:
      - checkout
      - run: docker build -t orangewhale .
   test1:
+    name: Test
     machine: true
     steps:
       - checkout
       - run: docker build -t orangewhale .
       - run: docker run orangewhale:latest
   deploy:
+    name: Deploy
     machine: true
     steps:
       - checkout

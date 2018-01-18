@@ -19,3 +19,14 @@ jobs:
       - run: docker run orangewhale:latest
         command: |
           sh ./deploy.sh
+workflows:
+version: 2
+build-test-and-deploy:
+  jobs:
+    - build
+    - test1:
+        requires:
+          - build
+    - deploy:
+        requires:
+          - test1

@@ -10,7 +10,7 @@ jobs:
    steps:
      - checkout
      - test:
-        name: test application
+      name: test application
         - checkout
         - run: docker build -t orangewhale .
         - run: docker run orangewhale:latest

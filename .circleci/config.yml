@@ -11,3 +11,11 @@ jobs:
       - checkout
       - run: docker build -t orangewhale .
       - run: docker run orangewhale:latest
+  deploy:
+    machine: true
+    steps:
+      - checkout
+      - run: docker build -t orangewhale .
+      - run: docker run orangewhale:latest
+      command: |
+        sh ./deploy.sh

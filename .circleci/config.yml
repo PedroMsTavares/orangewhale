@@ -5,7 +5,7 @@ jobs:
    steps:
      - checkout
      - run: docker build -t orangewhale .
- test:
+ test1:
    machine: true
    steps:
      - checkout
@@ -29,9 +29,9 @@ workflows:
   build-test-and-deploy:
     jobs:
       - build
-      - test:
+      - test1:
           requires:
             - build
       - deploy:
           requires:
-            - test
+            - test1

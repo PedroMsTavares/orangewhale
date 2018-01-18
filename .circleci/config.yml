@@ -8,4 +8,4 @@ jobs:
      - deploy:
          name: Push application Docker image
          command: |
-         sh ./deploy.sh
+          sh ./deploy.sh

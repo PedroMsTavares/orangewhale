@@ -4,7 +4,7 @@ const messagesBeforeSendGif = 10
 
 
 // replace the value below with the Telegram token you receive from @BotFather
-const token = '480582065:AAHeEqzVLMq1Aq77nsAMW1dCPQIJqDjbKKg';
+const token = 'xxx';
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
